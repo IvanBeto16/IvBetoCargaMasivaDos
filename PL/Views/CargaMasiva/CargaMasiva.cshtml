@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "CargaMasiva";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center fw-bold">CargaMasiva</h2>
+<br />
+<br />
+<span>Cargue el archivo separado por comas para la carga masiva de datos.</span>
+<hr />
+@using (Html.BeginForm("LeerArchivo", "CargaMasiva", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://previews.123rf.com/images/feelisgood/feelisgood1709/feelisgood170901840/86136479-%C3%BAselo-en-todos-sus-dise%C3%B1os-icono-de-extensi%C3%B3n-de-nombre-de-archivo-csv-valores-separados-por-comas.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Carga Masiva</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <input type="file" name="ArchivoComas" class="form-control" />
+            <br />
+            <button class="btn btn-primary" type="submit">Cargar Archivo</button>
+        </div>
+    </div>
+}
+
+
